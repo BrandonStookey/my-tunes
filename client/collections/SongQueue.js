@@ -4,7 +4,7 @@ var SongQueue = Songs.extend({
   initialize: function(){
   	///We need to render clicked songs into a queue
   		//and then if it is the only song we need to play it
-  	this.on('add', this.enqueue, this)
+  	this.on('add', this.selectQueue, this)
   	},
 
   // enqueue: function(){
