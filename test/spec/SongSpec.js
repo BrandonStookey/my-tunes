@@ -17,10 +17,10 @@ describe('SongModel', function() {
     });
   });
 
-  xdescribe('enqueue', function() {
-    it('triggers an "enqueue" event', function() {
-      model.enqueue();
-      expect(model.trigger).to.have.been.calledWith('enqueue', model);
+  describe('selectQueue', function() {
+    it('triggers an "selectQueue" event', function() {
+      model.selectQueue();
+      expect(model.trigger).to.have.been.calledWith('selectQueue', model);
     });
   });
 

@@ -2,7 +2,7 @@ describe('SongQueue', function() {
   var playSpy, songData1, songData2;
 
   beforeEach(function() {
-    playSpy = sinon.spy(SongQueue.prototype, 'playFirst');
+    playSpy = sinon.spy(SongQueue.prototype, 'playFirst');////changed from playFirst to enqueue
     songData1 = {
       artist: 'data',
       url: '/test/testsong.mp3',
@@ -16,12 +16,12 @@ describe('SongQueue', function() {
   });
 
   afterEach(function() {
-    SongQueue.prototype.playFirst.restore();
+    SongQueue.prototype.playFirst.restore(); ////changed from playFirst to enqueue
   });
 
   describe('when a song is added', function() {
     describe('when it is the only song in the song queue', function() {
-      xit('plays it', function() {
+      it('plays it', function() {
         var songQueue = new SongQueue();
         songQueue.add(songData1);
         expect(playSpy).to.have.been.called;
@@ -29,7 +29,7 @@ describe('SongQueue', function() {
     });
 
     describe('when it is not the only song in the song queue', function() {
-      xit('does nothing', function() {
+      it('does nothing', function() {
         var songQueue = new SongQueue(songData1);
         songQueue.add(songData2);
         expect(playSpy).to.have.not.been.called;
@@ -75,7 +75,7 @@ describe('SongQueue', function() {
   });
 
   describe('playFirst', function() {
-    xit('plays the first song in the queue', function() {
+    it('plays the first song in the queue', function() {
       sinon.spy(SongModel.prototype, 'play');
       var songQueue = new SongQueue(songData1);
       songQueue.playFirst();

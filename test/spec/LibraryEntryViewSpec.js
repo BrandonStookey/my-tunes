@@ -22,13 +22,13 @@ describe('LibraryEntryView', function() {
     SongModel.prototype.play.restore();
   });
 
-  xit('queues clicked songs', function(){
-    sinon.spy(SongModel.prototype, 'enqueue');
+  it('queues clicked songs', function(){
+    sinon.spy(SongModel.prototype, 'selectQueue');
 
     view.$el.children().first().click();
-    expect(model.enqueue).to.have.been.called;
+    expect(model.selectQueue).to.have.been.called;
 
-    SongModel.prototype.enqueue.restore();
+    SongModel.prototype.selectQueue.restore();
   });
 
 });
