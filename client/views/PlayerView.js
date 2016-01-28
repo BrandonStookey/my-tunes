@@ -5,7 +5,8 @@ var PlayerView = Backbone.View.extend({
   // see: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
   el: '<audio controls autoplay />',
 
-  initialize: function() {
+   initialize: function() {
+    this.$el.bind('ended'); //this.$el.bind
   },
 
   setSong: function(song){
@@ -21,5 +22,12 @@ var PlayerView = Backbone.View.extend({
 
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ended
 //var isEnded = audioOrVideo.ended
-// var obj = document.createElement('video');
+
+// var obj = document.createElement('audio');
 // console.log(obj.ended); // false
+
+///if(isEnded){
+  //then splice(song,1) or shift and dequeue only shift inside of songqueue.js
+  //increment inside array
+  //then unshift
+//}
