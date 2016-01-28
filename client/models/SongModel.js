@@ -7,8 +7,12 @@ var SongModel = Backbone.Model.extend({
   },
 
   selectQueue: function(){
-
   	this.trigger('selectQueue', this);
+  },
+
+  enqueue: function(){
+		this.trigger('enqueue', this)
   }
+
 
 });
