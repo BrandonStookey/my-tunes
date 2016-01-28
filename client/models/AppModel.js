@@ -17,5 +17,6 @@ var AppModel = Backbone.Model.extend({
       this.set('currentSong', song);
     }, this);
   }
+   
 
 });

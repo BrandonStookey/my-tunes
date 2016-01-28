@@ -14,6 +14,8 @@
     <script src="collections/SongQueue.js"></script>
     <script src="models/AppModel.js"></script>
 
+    <script src="views/SongQueueEntryView.js"></script>
+    <script src="views/SongQueueView.js"></script>
     <script src="views/PlayerView.js"></script>
     <script src="views/LibraryView.js"></script>
     <script src="views/LibraryEntryView.js"></script>
@@ -22,10 +24,17 @@
     <script>
       $(function(){
         // set up model objects
-        var library = new Songs(songData);
+        //you can find var library in Songs.js, it is creating
+        //Backbone.Collection.extend
+        var library = new Songs(songData); 
+
+        // var app can be found in AppModel.js, it is creating
+        //Backbone.Model.extend
         var app = new AppModel({library: library});
 
         // build a view for the top level of the whole app
+        // var appView can be found in AppView.js, it is creating
+        //Backbone.View.extend
         var appView = new AppView({model: app});
 
         // put the view onto the screen
