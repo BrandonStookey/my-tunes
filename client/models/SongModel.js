@@ -26,6 +26,11 @@ var SongModel = Backbone.Model.extend({
     this.trigger('playNext', this)
   },
 
+  playFirst: function(song){
+    this.trigger('playFirst', this)
+  }
+
+
   // isEnded: function(){
   //   this.trigger('isEnded', this)
   // }

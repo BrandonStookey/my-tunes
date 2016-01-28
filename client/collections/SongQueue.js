@@ -5,7 +5,7 @@ var SongQueue = Songs.extend({
   initialize: function(){
   	///We need to render clicked songs into a queue
   		//and then if it is the only song we need to play it
-  	this.on('add', this.playFirst, this),
+  	this.on('add', this.playSong, this),
     //this.on('play', this.enqueue, this)
     this.on('dequeue', this.dequeue, this),
 
@@ -13,9 +13,9 @@ var SongQueue = Songs.extend({
 
     },
 
-  playFirst: function(song){
+  playSong: function(song){
      if(this.length === 1){
-      this.at(0).play();
+      this.playFirst();
     }
   },
 
@@ -29,14 +29,17 @@ var SongQueue = Songs.extend({
   },
 
   nextSong: function(ended){
-    
       this.shift();
       if(this.length >= 1){
-        this.at(0).play();
+        this.playFirst();
       } else{
         this.trigger('stop');
       }
     
+  },
+
+  playFirst: function(){
+     this.at(0).play();
   }
   
 });
