@@ -7,12 +7,15 @@ var LibraryEntryView = Backbone.View.extend({
 
   events: {
     'click': function() {
-      this.model.enqueue();//enqueue WAS this.model.enqueue();
+      this.model.enqueue();//enqueue WAS this.model.play();
+      //this.model.play();
     }
   },
 
   render: function(){
     return this.$el.html(this.template(this.model.attributes));
+    //What is this.model.attributes? Is this how songs are being
+    //appened to the page????
   }
 
 });
