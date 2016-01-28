@@ -17,9 +17,9 @@ var AppModel = Backbone.Model.extend({
       this.set('currentSong', song);
     }, this);
   
-    params.library.on('ended', function(song){
-      this.set('currentSong', null);
-    }, this);
+    // params.library.on('ended', function(song){
+    //   this.set('currentSong', null);
+    // }, this);
 
     params.library.on('selectQueue', function(song){
       this.get('songQueue').add(song);
