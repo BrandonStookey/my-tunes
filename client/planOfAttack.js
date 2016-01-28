@@ -31,3 +31,10 @@
   // and listens for events
 //Collections(Controllers) manipulates models data
   //and then it all starts over again
+
+
+// https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ended
+//var isEnded = audioOrVideo.ended
+// var obj = document.createElement('video');
+// console.log(obj.ended); // false
+

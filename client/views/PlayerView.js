@@ -18,3 +18,8 @@ var PlayerView = Backbone.View.extend({
   }
 
 });
+
+// https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ended
+//var isEnded = audioOrVideo.ended
+// var obj = document.createElement('video');
+// console.log(obj.ended); // false
