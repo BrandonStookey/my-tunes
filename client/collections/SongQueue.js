@@ -9,9 +9,9 @@ var SongQueue = Songs.extend({
     //this.on('play', this.enqueue, this)
     this.on('dequeue', this.dequeue, this),
 
-    this.on('ended', this.nextSong, this),
+    this.on('ended', this.nextSong, this)
 
-    this.on('counter', this.counter, this)
+    // this.on('counter', this.counter, this)
     },
 
   playSong: function(song){

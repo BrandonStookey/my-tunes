@@ -2,7 +2,7 @@
 var LibraryEntryView = Backbone.View.extend({
 
   tagName: 'tr', //defines a row of cells in a table.
-
+   //className: "LibraryEntryView",
   template: _.template('<td>(<%= artist %>)</td><td><%= title %></td>'),
 
   events: {

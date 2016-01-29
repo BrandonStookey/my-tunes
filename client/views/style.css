@@ -1,0 +1,30 @@
+body{
+background-image: url('http://www.bipnational.net/Portals/_default/Skins/Minimalist-BioBlue-Gradient/backgrounds/Black/11_image.jpg');
+	
+	background-repeat: no-repeat;
+}
+
+.targetDiv{
+	background-image: url('https://cdn4.iconfinder.com/data/icons/colicon/24/tablet_ipad_mobile_device-512.png');
+	height: 500px;
+	width: 500px;
+	z-index: 100;
+}
+.LibraryEntryView{
+	padding-top: 20px;
+	padding-left: 120px;
+}
+
+.SongQueueView{
+	
+	padding-top: 80px;
+	padding-left: 120px;
+}
+
+audio{
+	
+	padding-top: 50px;
+	padding-left: 110px;
+	top: 200px;
+
+}
