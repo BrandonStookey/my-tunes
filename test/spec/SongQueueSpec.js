@@ -84,15 +84,15 @@ describe('SongQueue', function() {
     });
   });
 
-  // describe('removeSong', function() {
-  //   it('expects songs to be removed from queue', function() {
-  //     sinon.spy(SongModel.prototype, 'play');
-  //     var songQueue = new SongQueue(songData1);
-  //     songQueue.playSong();
-  //     expect(songQueue.at(0).play).to.have.been.called;
-  //     SongModel.prototype.play.restore();
-  //   });
-  // });
+  describe('removeSong', function() {
+    it('expects songs to be removed from queue', function() {
+      removeSpy = sinon.spy(SongQueue.prototype, 'remove');
+      var songQueue = new SongQueue(songData1);
+      songQueue.dequeue();
+      expect(removeSpy).to.have.been.called;
+      SongQueue.prototype.remove.restore();
+    });
+  });
 
 
 })

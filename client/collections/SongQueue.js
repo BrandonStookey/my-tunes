@@ -9,8 +9,9 @@ var SongQueue = Songs.extend({
     //this.on('play', this.enqueue, this)
     this.on('dequeue', this.dequeue, this),
 
-    this.on('ended', this.nextSong, this);
+    this.on('ended', this.nextSong, this),
 
+    this.on('counter', this.counter, this)
     },
 
   playSong: function(song){
@@ -40,6 +41,9 @@ var SongQueue = Songs.extend({
 
   playFirst: function(){
      this.at(0).play();
-  }
-  
+  },
+  // counter: function(song){
+  //    return song;
+
+  // }
 });
